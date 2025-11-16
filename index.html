@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Bus Route Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Simple Bus Route Selector</h1>
+        <p>Select your origin and destination to find the next bus.</p>
+      </header>
+
+      <form id="route-form" class="route-form">
+        <div class="field">
+          <label for="origin">Origin</label>
+          <select id="origin" name="origin"></select>
+        </div>
+        <div class="field">
+          <label for="destination">Destination</label>
+          <select id="destination" name="destination"></select>
+        </div>
+        <button type="submit" class="cta">Find Next Bus</button>
+      </form>
+
+      <section id="result" class="result result--hidden">
+        <h2 id="result-title"></h2>
+        <p id="next-time"></p>
+        <p id="wait-time"></p>
+      </section>
+
+      <section class="schedule">
+        <h2>Today's Schedule</h2>
+        <div id="schedule-table" class="schedule__grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
